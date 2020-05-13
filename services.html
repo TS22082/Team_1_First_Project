@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://js.stripe.com/v3/"></script>
+    <title>Services & Subscriptions</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      background-color: rgb(170, 190, 207) inherit !important
+      }
+    .navbar {
+        height: 90px;
+      }
+    #description {
+      margin-top: 100px;
+    }
+    h2 {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .col-md-4 {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: cadetblue;
+      color: rgb(245, 241, 236);
+      min-height: 600px;
+      border-radius: 2%;
+      border-left: beige;
+      border-left: solid;
+    }
+    .col-md-4 h3,
+    .col-md-4 h5 {
+      text-align: center;
+    }
+    .col-md-4 li {
+      padding-top: 5px;
+      list-style: circle;
+    }
+    .form {
+      position: absolute;
+      margin-left: 140px;
+      bottom: 30px;
+    }
+  </style>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Doulaville</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+  <div class="container" id="description">
+    <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+    <h3 class="text-center">Birth Support</h3>
+    <p> Birth Doulas remain current in evidence-based practices and work hard to
+        protect and support each couple’s desires and personal plans for the
+        birth of their baby.
+    </p>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="row"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+    <h3 class="text-center">Postpartum Support</h3>
+    <p> Postpartum Doulas work with couples to identify what type of support
+        they need. Our doulas are experienced with multiples, preemies and
+        special needs babies so we can help your family get off to a great start
+        whatever your unique situation might be.
+    </p>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+    
+  <h2>Subscriptions</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>On-Call</h3>
+        <h5>$100/hr</h5>
+        <ul>
+          <li>1 time hour-long session</li>
+          <!-- <li></li>
+          <li></li> -->
+        </ul> 
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="10000"
+          data-name="Doulaville"
+          data-description="Doula On Call - 1 hour"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <h3>Birth Support</h3>
+        <h5>$1,000/Package</h5>
+        <ul>
+          <li>3 prenatal home visits</li>
+          <li>2 postnatal home visits after the birth of your newborn</li>
+          <li>On call support from your 37th week until birth of baby</li>
+          <li>
+            Guidance and support for you and your partner during labor and
+              birth
+          </li>
+          <li>
+              Breastfeeding assistance immediately after your baby is born
+          </li>
+          <li>Photos of birth and newborn baby if you desire</li>
+          <li>
+              The story of your birth; as witnessed by the doula if you desire
+          </li>
+          <li>Phone contact during pregnancy and after the birth</li>
+        </ul>
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="100000"
+          data-name="Doulaville"
+          data-description="Doula - Birth Support"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <h3>Postpartum Support</h3>
+        <h5>$1,500/Package</h5>
+        <ul>
+          <li>Regularl visits at your home during the early days after birth and
+                into the first few months postpartum</li>
+          <li>Providing physical, emotional, educational and practical support to the
+                family following the birth of the baby</li>
+          <li>Caring for the mother, giving her time to recuperate and relax</li>
+          <li>Breastfeeding consultations</li>
+          <li>Newborn assistance: diapering, bathing, and comforting</li>
+          <li>Providing information on baby soothing techniques</li>
+          <li>Helping with baby sleep issues</li>
+          <li>Providing day & overnight care</li>
+        </ul>
+        <form action="./thanks.html" method="POST">
+          <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_P7Plzb4azqJyY0AykXyzua5G00pV8ZeRVp"
+          data-amount="150000"
+          data-name="Doulaville"
+          data-description="Doula - Postpartum Support"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-locale="auto"></script>
+      </div>
+    </div>
+
+  <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+  ></script>
+  <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+  ></script>
+  <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+  ></script>
+    <!-- Adding stripe.js -->
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>
